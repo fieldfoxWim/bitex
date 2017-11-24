@@ -1,0 +1,295 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BitEx - Crypto-currency Exchange API Framework &mdash; BitEx 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="BitEx 2.0.0 documentation" href="#"/>
+        <link rel="next" title="User’s Guide" href="guide.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="#" class="icon icon-home"> BitEx
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="guide.html">User’s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">BitEx Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html#api-objects">API Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html#interface-objects">Interface Objects</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">BitEx</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>BitEx - Crypto-currency Exchange API Framework</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="bitex-crypto-currency-exchange-api-framework">
+<h1>BitEx - Crypto-currency Exchange API Framework<a class="headerlink" href="#bitex-crypto-currency-exchange-api-framework" title="Permalink to this headline">¶</a></h1>
+<p>Bitex is a Python framework to connect easily with a variety of Crypto Currency Exchanges.
+It enables trader/developers to focus on their trading algoritms and strategies without the need
+of any knowledge of specific Exchange APIs.</p>
+<div class="section" id="quick-links">
+<h2>Quick Links<a class="headerlink" href="#quick-links" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Current version: 2.0.0 (<a class="reference external" href="https://pypi.python.org/pypi/bitex">download from PyPI</a>,)</li>
+<li><a class="reference external" href="https://github.com/nlsdfnbch/bitex">Source (github)</a></li>
+</ul>
+</div>
+<div class="section" id="as-easy-as-it-is">
+<h2>As easy as it is<a class="headerlink" href="#as-easy-as-it-is" title="Permalink to this headline">¶</a></h2>
+<p>Here is a simple example requesting the ticker info</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bitex</span> <span class="kn">import</span> <span class="n">Bitfinex</span>
+<span class="kn">from</span> <span class="nn">bitex.pairs</span> <span class="kn">import</span> <span class="n">ETHBTC</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">Bitfinex</span><span class="p">()</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">ticker</span><span class="p">(</span><span class="n">ETHBTC</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+   <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This example does not use authentication. It simply connects to the public API of Bitfinex and requests the ticker for ETH-BTC.</p>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">BitEx</span>
+</pre></div>
+</div>
+<p><strong>Prerequisites</strong>: BitEx runs on Python 3.3+</p>
+</div>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="guide.html">User’s Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide.html#common-interface">Common Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide.html#coins-and-pairs">Coins and pairs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide.html#authentication">Authentication</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">BitEx Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html#api-objects">API Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html#interface-objects">Interface Objects</a></li>
+</ul>
+</div>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+<div class="section" id="discussion-and-support">
+<h2>Discussion and support<a class="headerlink" href="#discussion-and-support" title="Permalink to this headline">¶</a></h2>
+<p>You can report bugs or ask questions on
+the <a class="reference external" href="https://github.com/nlsdfnbch/bitex/issues">GitHub issue tracker</a>.</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="guide.html" class="btn btn-neutral float-right" title="User’s Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Nils Diefenbach.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
