@@ -1,41 +1,161 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>BitEx Code Reference &mdash; BitEx 2.0.0 documentation</title>
-    
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '2.0.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="BitEx 2.0.0 documentation" href="index.html" />
-    <link rel="prev" title="Welcome to BitEx’s documentation!" href="index.html" />
-   
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
   
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BitEx Code Reference &mdash; BitEx 2.0.0 documentation</title>
+  
 
-  </head>
-  <body role="document">  
+  
+  
+  
+  
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="BitEx 2.0.0 documentation" href="index.html"/>
+        <link rel="prev" title="Introduction" href="guide.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> BitEx
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="guide.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">BitEx Code Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#api-objects">API Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#interface-objects">Interface Objects</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">BitEx</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>BitEx Code Reference</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/reference.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="module-bitex">
 <span id="bitex-code-reference"></span><h1>BitEx Code Reference<a class="headerlink" href="#module-bitex" title="Permalink to this headline">¶</a></h1>
@@ -49,14 +169,14 @@ License: MIT</p>
 <h1>API Objects<a class="headerlink" href="#api-objects" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="bitex.api.base.BaseAPI">
-<em class="property">class </em><code class="descclassname">bitex.api.base.</code><code class="descname">BaseAPI</code><span class="sig-paren">(</span><em>*</em>, <em>addr</em>, <em>key</em>, <em>secret</em>, <em>version</em>, <em>config</em><span class="sig-paren">)</span><a class="headerlink" href="#bitex.api.base.BaseAPI" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">bitex.api.base.</code><code class="descname">BaseAPI</code><span class="sig-paren">(</span><em>*</em>, <em>addr</em>, <em>key</em>, <em>secret</em>, <em>version</em>, <em>config</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bitex/api/base.html#BaseAPI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitex.api.base.BaseAPI" title="Permalink to this definition">¶</a></dt>
 <dd><p>BaseAPI provides lowest-common-denominator methods used in all API types.</p>
 <p>It provides a nonce() method, basic configuration loading and credential
 validity checking method check_auth_requirements(), which should be
 extended in subclasses to cover any additional parameters that are necessary.</p>
 <dl class="method">
 <dt id="bitex.api.base.BaseAPI.check_auth_requirements">
-<code class="descname">check_auth_requirements</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bitex.api.base.BaseAPI.check_auth_requirements" title="Permalink to this definition">¶</a></dt>
+<code class="descname">check_auth_requirements</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bitex/api/base.html#BaseAPI.check_auth_requirements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitex.api.base.BaseAPI.check_auth_requirements" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check that neither self.key nor self.secret are None.</p>
 <p>If so, this method raises an IncompleteCredentialsError. Otherwise returns None.</p>
 <p>Extend this in child classes if you need to check for further
@@ -75,14 +195,14 @@ required values.</p>
 
 <dl class="method">
 <dt id="bitex.api.base.BaseAPI.load_config">
-<code class="descname">load_config</code><span class="sig-paren">(</span><em>fname</em><span class="sig-paren">)</span><a class="headerlink" href="#bitex.api.base.BaseAPI.load_config" title="Permalink to this definition">¶</a></dt>
+<code class="descname">load_config</code><span class="sig-paren">(</span><em>fname</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bitex/api/base.html#BaseAPI.load_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitex.api.base.BaseAPI.load_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load configuration from an ini file.</p>
 <p>Return it, in case this func needs to be extended.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>fname</strong> &#8211; path to file</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>fname</strong> – path to file</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">configparser.ConfigParser() Obj</td>
 </tr>
@@ -92,7 +212,7 @@ required values.</p>
 
 <dl class="staticmethod">
 <dt id="bitex.api.base.BaseAPI.nonce">
-<em class="property">static </em><code class="descname">nonce</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bitex.api.base.BaseAPI.nonce" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">nonce</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/bitex/api/base.html#BaseAPI.nonce"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitex.api.base.BaseAPI.nonce" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Nonce value for signature generation.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -108,19 +228,19 @@ required values.</p>
 
 <dl class="class">
 <dt id="bitex.api.REST.rest.RESTAPI">
-<em class="property">class </em><code class="descclassname">bitex.api.REST.rest.</code><code class="descname">RESTAPI</code><span class="sig-paren">(</span><em>addr</em>, <em>timeout=None</em>, <em>key=None</em>, <em>secret=None</em>, <em>version=None</em>, <em>config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bitex.api.REST.rest.RESTAPI" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">bitex.api.REST.rest.</code><code class="descname">RESTAPI</code><span class="sig-paren">(</span><em>addr</em>, <em>timeout=None</em>, <em>key=None</em>, <em>secret=None</em>, <em>version=None</em>, <em>config=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bitex/api/REST/rest.html#RESTAPI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitex.api.REST.rest.RESTAPI" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generic REST API interface.</p>
 <p>Supplies private and public query methods,
 as well as building blocks to customize the signature generation process.</p>
 <dl class="method">
 <dt id="bitex.api.REST.rest.RESTAPI.generate_uri">
-<code class="descname">generate_uri</code><span class="sig-paren">(</span><em>endpoint</em><span class="sig-paren">)</span><a class="headerlink" href="#bitex.api.REST.rest.RESTAPI.generate_uri" title="Permalink to this definition">¶</a></dt>
+<code class="descname">generate_uri</code><span class="sig-paren">(</span><em>endpoint</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bitex/api/REST/rest.html#RESTAPI.generate_uri"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitex.api.REST.rest.RESTAPI.generate_uri" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate a Unique Resource Identifier (API Version + Endpoint).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>endpoint</strong> &#8211; str, endpoint path (i.e. /market/btcusd)</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>endpoint</strong> – str, endpoint path (i.e. /market/btcusd)</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">str, URI</td>
 </tr>
@@ -130,13 +250,13 @@ as well as building blocks to customize the signature generation process.</p>
 
 <dl class="method">
 <dt id="bitex.api.REST.rest.RESTAPI.generate_url">
-<code class="descname">generate_url</code><span class="sig-paren">(</span><em>uri</em><span class="sig-paren">)</span><a class="headerlink" href="#bitex.api.REST.rest.RESTAPI.generate_url" title="Permalink to this definition">¶</a></dt>
+<code class="descname">generate_url</code><span class="sig-paren">(</span><em>uri</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bitex/api/REST/rest.html#RESTAPI.generate_url"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitex.api.REST.rest.RESTAPI.generate_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate a Unique Resource Locator (API Address + URI).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>uri</strong> &#8211; str, URI</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>uri</strong> – str, URI</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">str, URL</td>
 </tr>
@@ -146,16 +266,16 @@ as well as building blocks to customize the signature generation process.</p>
 
 <dl class="method">
 <dt id="bitex.api.REST.rest.RESTAPI.private_query">
-<code class="descname">private_query</code><span class="sig-paren">(</span><em>method_verb</em>, <em>endpoint</em>, <em>**request_kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bitex.api.REST.rest.RESTAPI.private_query" title="Permalink to this definition">¶</a></dt>
+<code class="descname">private_query</code><span class="sig-paren">(</span><em>method_verb</em>, <em>endpoint</em>, <em>**request_kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bitex/api/REST/rest.html#RESTAPI.private_query"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitex.api.REST.rest.RESTAPI.private_query" title="Permalink to this definition">¶</a></dt>
 <dd><p>Query a private API endpoint requiring signing of the request.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>method_verb</strong> &#8211; valid HTTP Verb (GET, PUT, DELETE, etc.)</li>
-<li><strong>endpoint</strong> &#8211; str, API Endpoint</li>
-<li><strong>request_kwargs</strong> &#8211; kwargs for request.Request()</li>
+<li><strong>method_verb</strong> – valid HTTP Verb (GET, PUT, DELETE, etc.)</li>
+<li><strong>endpoint</strong> – str, API Endpoint</li>
+<li><strong>request_kwargs</strong> – kwargs for request.Request()</li>
 </ul>
 </td>
 </tr>
@@ -168,16 +288,16 @@ as well as building blocks to customize the signature generation process.</p>
 
 <dl class="method">
 <dt id="bitex.api.REST.rest.RESTAPI.public_query">
-<code class="descname">public_query</code><span class="sig-paren">(</span><em>method_verb</em>, <em>endpoint</em>, <em>**request_kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bitex.api.REST.rest.RESTAPI.public_query" title="Permalink to this definition">¶</a></dt>
+<code class="descname">public_query</code><span class="sig-paren">(</span><em>method_verb</em>, <em>endpoint</em>, <em>**request_kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bitex/api/REST/rest.html#RESTAPI.public_query"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitex.api.REST.rest.RESTAPI.public_query" title="Permalink to this definition">¶</a></dt>
 <dd><p>Query a public (i.e. unauthenticated) API endpoint and return the result.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>method_verb</strong> &#8211; valid HTTP Verb (GET, PUT, DELETE, etc.)</li>
-<li><strong>endpoint</strong> &#8211; str, API Endpoint</li>
-<li><strong>request_kwargs</strong> &#8211; kwargs for request.Request()</li>
+<li><strong>method_verb</strong> – valid HTTP Verb (GET, PUT, DELETE, etc.)</li>
+<li><strong>endpoint</strong> – str, API Endpoint</li>
+<li><strong>request_kwargs</strong> – kwargs for request.Request()</li>
 </ul>
 </td>
 </tr>
@@ -190,7 +310,7 @@ as well as building blocks to customize the signature generation process.</p>
 
 <dl class="method">
 <dt id="bitex.api.REST.rest.RESTAPI.sign_request_kwargs">
-<code class="descname">sign_request_kwargs</code><span class="sig-paren">(</span><em>endpoint</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bitex.api.REST.rest.RESTAPI.sign_request_kwargs" title="Permalink to this definition">¶</a></dt>
+<code class="descname">sign_request_kwargs</code><span class="sig-paren">(</span><em>endpoint</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bitex/api/REST/rest.html#RESTAPI.sign_request_kwargs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitex.api.REST.rest.RESTAPI.sign_request_kwargs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate dummy Request Kwarg Signature.</p>
 <p>Extend this to implement signing of requests for private API calls. By default, it supplies
 a default URL using generate_uri and generate_url.</p>
@@ -199,8 +319,8 @@ a default URL using generate_uri and generate_url.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>endpoint</strong> &#8211; str, API Endpoint</li>
-<li><strong>kwargs</strong> &#8211; Kwargs meant for requests.Request()</li>
+<li><strong>endpoint</strong> – str, API Endpoint</li>
+<li><strong>kwargs</strong> – Kwargs meant for requests.Request()</li>
 </ul>
 </td>
 </tr>
@@ -218,20 +338,20 @@ a default URL using generate_uri and generate_url.</p>
 <h1>Interface Objects<a class="headerlink" href="#interface-objects" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="bitex.interface.base.Interface">
-<em class="property">class </em><code class="descclassname">bitex.interface.base.</code><code class="descname">Interface</code><span class="sig-paren">(</span><em>*</em>, <em>name</em>, <em>rest_api</em><span class="sig-paren">)</span><a class="headerlink" href="#bitex.interface.base.Interface" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">bitex.interface.base.</code><code class="descname">Interface</code><span class="sig-paren">(</span><em>*</em>, <em>name</em>, <em>rest_api</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bitex/interface/base.html#Interface"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitex.interface.base.Interface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base class for Interface objects.</p>
 <dl class="method">
 <dt id="bitex.interface.base.Interface.is_supported">
-<code class="descname">is_supported</code><span class="sig-paren">(</span><em>pair</em><span class="sig-paren">)</span><a class="headerlink" href="#bitex.interface.base.Interface.is_supported" title="Permalink to this definition">¶</a></dt>
+<code class="descname">is_supported</code><span class="sig-paren">(</span><em>pair</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bitex/interface/base.html#Interface.is_supported"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitex.interface.base.Interface.is_supported" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if the given pair is present in self._supported_pairs.</p>
 <p>Input can either be a string or a PairFormatter Obj (or child thereof).
-If it is the latter two, we&#8217;ll call the format() method with the Interface&#8217;s
+If it is the latter two, we’ll call the format() method with the Interface’s
 name attribute to acquire proper formatting.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pair</strong> &#8211; Str, or bitex.pairs.PairFormatter Object</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pair</strong> – Str, or bitex.pairs.PairFormatter Object</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Bool</td>
 </tr>
@@ -241,18 +361,18 @@ name attribute to acquire proper formatting.</p>
 
 <dl class="method">
 <dt id="bitex.interface.base.Interface.request">
-<code class="descname">request</code><span class="sig-paren">(</span><em>verb</em>, <em>endpoint</em>, <em>authenticate=False</em>, <em>**req_kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bitex.interface.base.Interface.request" title="Permalink to this definition">¶</a></dt>
+<code class="descname">request</code><span class="sig-paren">(</span><em>verb</em>, <em>endpoint</em>, <em>authenticate=False</em>, <em>**req_kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bitex/interface/base.html#Interface.request"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitex.interface.base.Interface.request" title="Permalink to this definition">¶</a></dt>
 <dd><p>Query the API and return its result.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>verb</strong> &#8211; HTTP verb (GET, PUT, DELETE, etc)</li>
-<li><strong>endpoint</strong> &#8211; Str</li>
-<li><strong>authenticate</strong> &#8211; Bool, whether to call private_query or public_query
+<li><strong>verb</strong> – HTTP verb (GET, PUT, DELETE, etc)</li>
+<li><strong>endpoint</strong> – Str</li>
+<li><strong>authenticate</strong> – Bool, whether to call private_query or public_query
 method.</li>
-<li><strong>req_kwargs</strong> &#8211; Kwargs to pass to _query / <code class="xref py py-class docutils literal"><span class="pre">requests.Request()</span></code></li>
+<li><strong>req_kwargs</strong> – Kwargs to pass to _query / <code class="xref py py-class docutils literal"><span class="pre">requests.Request()</span></code></li>
 </ul>
 </td>
 </tr>
@@ -284,22 +404,22 @@ method.</li>
 
 <dl class="class">
 <dt id="bitex.interface.rest.RESTInterface">
-<em class="property">class </em><code class="descclassname">bitex.interface.rest.</code><code class="descname">RESTInterface</code><span class="sig-paren">(</span><em>name</em>, <em>rest_api</em><span class="sig-paren">)</span><a class="headerlink" href="#bitex.interface.rest.RESTInterface" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">bitex.interface.rest.</code><code class="descname">RESTInterface</code><span class="sig-paren">(</span><em>name</em>, <em>rest_api</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bitex/interface/rest.html#RESTInterface"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitex.interface.rest.RESTInterface" title="Permalink to this definition">¶</a></dt>
 <dd><p>REST Interface base class.</p>
 <dl class="method">
 <dt id="bitex.interface.rest.RESTInterface.ask">
-<code class="descname">ask</code><span class="sig-paren">(</span><em>pair</em>, <em>price</em>, <em>size</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bitex.interface.rest.RESTInterface.ask" title="Permalink to this definition">¶</a></dt>
+<code class="descname">ask</code><span class="sig-paren">(</span><em>pair</em>, <em>price</em>, <em>size</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bitex/interface/rest.html#RESTInterface.ask"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitex.interface.rest.RESTInterface.ask" title="Permalink to this definition">¶</a></dt>
 <dd><p>Place an ask order.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>pair</strong> &#8211; Str, pair to post order for.</li>
-<li><strong>price</strong> &#8211; Float or str, price you&#8217;d like to ask.</li>
-<li><strong>size</strong> &#8211; Float or str, amount of currency you&#8217;d like to sell.</li>
-<li><strong>args</strong> &#8211; additional arguments.</li>
-<li><strong>kwargs</strong> &#8211; additional kwargs, passed to requests.Requests() as &#8216;param&#8217; kwarg.</li>
+<li><strong>pair</strong> – Str, pair to post order for.</li>
+<li><strong>price</strong> – Float or str, price you’d like to ask.</li>
+<li><strong>size</strong> – Float or str, amount of currency you’d like to sell.</li>
+<li><strong>args</strong> – additional arguments.</li>
+<li><strong>kwargs</strong> – additional kwargs, passed to requests.Requests() as ‘param’ kwarg.</li>
 </ul>
 </td>
 </tr>
@@ -312,18 +432,18 @@ method.</li>
 
 <dl class="method">
 <dt id="bitex.interface.rest.RESTInterface.bid">
-<code class="descname">bid</code><span class="sig-paren">(</span><em>pair</em>, <em>price</em>, <em>size</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bitex.interface.rest.RESTInterface.bid" title="Permalink to this definition">¶</a></dt>
+<code class="descname">bid</code><span class="sig-paren">(</span><em>pair</em>, <em>price</em>, <em>size</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bitex/interface/rest.html#RESTInterface.bid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitex.interface.rest.RESTInterface.bid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Place a bid order.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>pair</strong> &#8211; Str, pair to post order for.</li>
-<li><strong>price</strong> &#8211; Float or str, price you&#8217;d like to bid.</li>
-<li><strong>size</strong> &#8211; Float or str, amount of currency you&#8217;d like to buy.</li>
-<li><strong>args</strong> &#8211; additional arguments.</li>
-<li><strong>kwargs</strong> &#8211; additional kwargs, passed to requests.Requests() as &#8216;param&#8217; kwarg.</li>
+<li><strong>pair</strong> – Str, pair to post order for.</li>
+<li><strong>price</strong> – Float or str, price you’d like to bid.</li>
+<li><strong>size</strong> – Float or str, amount of currency you’d like to buy.</li>
+<li><strong>args</strong> – additional arguments.</li>
+<li><strong>kwargs</strong> – additional kwargs, passed to requests.Requests() as ‘param’ kwarg.</li>
 </ul>
 </td>
 </tr>
@@ -336,15 +456,15 @@ method.</li>
 
 <dl class="method">
 <dt id="bitex.interface.rest.RESTInterface.cancel_order">
-<code class="descname">cancel_order</code><span class="sig-paren">(</span><em>*order_ids</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bitex.interface.rest.RESTInterface.cancel_order" title="Permalink to this definition">¶</a></dt>
+<code class="descname">cancel_order</code><span class="sig-paren">(</span><em>*order_ids</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bitex/interface/rest.html#RESTInterface.cancel_order"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitex.interface.rest.RESTInterface.cancel_order" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cancel the order(s) with the given id(s).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>order_ids</strong> &#8211; variable amount of order IDs to cancel.</li>
-<li><strong>kwargs</strong> &#8211; additional kwargs, passed to requests.Requests() as &#8216;param&#8217; kwarg.</li>
+<li><strong>order_ids</strong> – variable amount of order IDs to cancel.</li>
+<li><strong>kwargs</strong> – additional kwargs, passed to requests.Requests() as ‘param’ kwarg.</li>
 </ul>
 </td>
 </tr>
@@ -357,15 +477,15 @@ method.</li>
 
 <dl class="method">
 <dt id="bitex.interface.rest.RESTInterface.open_orders">
-<code class="descname">open_orders</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bitex.interface.rest.RESTInterface.open_orders" title="Permalink to this definition">¶</a></dt>
+<code class="descname">open_orders</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bitex/interface/rest.html#RESTInterface.open_orders"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitex.interface.rest.RESTInterface.open_orders" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return all open orders.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>args</strong> &#8211; additional arguments.</li>
-<li><strong>kwargs</strong> &#8211; additional kwargs, passed to requests.Requests() as &#8216;param&#8217; kwarg.</li>
+<li><strong>args</strong> – additional arguments.</li>
+<li><strong>kwargs</strong> – additional kwargs, passed to requests.Requests() as ‘param’ kwarg.</li>
 </ul>
 </td>
 </tr>
@@ -378,16 +498,16 @@ method.</li>
 
 <dl class="method">
 <dt id="bitex.interface.rest.RESTInterface.order_book">
-<code class="descname">order_book</code><span class="sig-paren">(</span><em>pair</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bitex.interface.rest.RESTInterface.order_book" title="Permalink to this definition">¶</a></dt>
+<code class="descname">order_book</code><span class="sig-paren">(</span><em>pair</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bitex/interface/rest.html#RESTInterface.order_book"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitex.interface.rest.RESTInterface.order_book" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the order book for the given pair.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>pair</strong> &#8211; Str, pair to request data for.</li>
-<li><strong>args</strong> &#8211; additional arguments.</li>
-<li><strong>kwargs</strong> &#8211; additional kwargs, passed to requests.Requests() as &#8216;param&#8217; kwarg.</li>
+<li><strong>pair</strong> – Str, pair to request data for.</li>
+<li><strong>args</strong> – additional arguments.</li>
+<li><strong>kwargs</strong> – additional kwargs, passed to requests.Requests() as ‘param’ kwarg.</li>
 </ul>
 </td>
 </tr>
@@ -400,16 +520,16 @@ method.</li>
 
 <dl class="method">
 <dt id="bitex.interface.rest.RESTInterface.order_status">
-<code class="descname">order_status</code><span class="sig-paren">(</span><em>order_id</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bitex.interface.rest.RESTInterface.order_status" title="Permalink to this definition">¶</a></dt>
+<code class="descname">order_status</code><span class="sig-paren">(</span><em>order_id</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bitex/interface/rest.html#RESTInterface.order_status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitex.interface.rest.RESTInterface.order_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the status of an order with the given id.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>order_id</strong> &#8211; Order ID of the order you&#8217;d like to have a status for.</li>
-<li><strong>args</strong> &#8211; additional arguments.</li>
-<li><strong>kwargs</strong> &#8211; additional kwargs, passed to requests.Requests() as &#8216;param&#8217; kwarg.</li>
+<li><strong>order_id</strong> – Order ID of the order you’d like to have a status for.</li>
+<li><strong>args</strong> – additional arguments.</li>
+<li><strong>kwargs</strong> – additional kwargs, passed to requests.Requests() as ‘param’ kwarg.</li>
 </ul>
 </td>
 </tr>
@@ -422,16 +542,16 @@ method.</li>
 
 <dl class="method">
 <dt id="bitex.interface.rest.RESTInterface.ticker">
-<code class="descname">ticker</code><span class="sig-paren">(</span><em>pair</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bitex.interface.rest.RESTInterface.ticker" title="Permalink to this definition">¶</a></dt>
+<code class="descname">ticker</code><span class="sig-paren">(</span><em>pair</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bitex/interface/rest.html#RESTInterface.ticker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitex.interface.rest.RESTInterface.ticker" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the ticker for the given pair.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>pair</strong> &#8211; Str, pair to request data for.</li>
-<li><strong>args</strong> &#8211; additional arguments.</li>
-<li><strong>kwargs</strong> &#8211; additional kwargs, passed to requests.Requests() as &#8216;param&#8217; kwarg.</li>
+<li><strong>pair</strong> – Str, pair to request data for.</li>
+<li><strong>args</strong> – additional arguments.</li>
+<li><strong>kwargs</strong> – additional kwargs, passed to requests.Requests() as ‘param’ kwarg.</li>
 </ul>
 </td>
 </tr>
@@ -444,16 +564,16 @@ method.</li>
 
 <dl class="method">
 <dt id="bitex.interface.rest.RESTInterface.trades">
-<code class="descname">trades</code><span class="sig-paren">(</span><em>pair</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bitex.interface.rest.RESTInterface.trades" title="Permalink to this definition">¶</a></dt>
+<code class="descname">trades</code><span class="sig-paren">(</span><em>pair</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bitex/interface/rest.html#RESTInterface.trades"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitex.interface.rest.RESTInterface.trades" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the trades for the given pair.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>pair</strong> &#8211; Str, pair to request data for.</li>
-<li><strong>args</strong> &#8211; additional arguments.</li>
-<li><strong>kwargs</strong> &#8211; additional kwargs, passed to requests.Requests() as &#8216;param&#8217; kwarg.</li>
+<li><strong>pair</strong> – Str, pair to request data for.</li>
+<li><strong>args</strong> – additional arguments.</li>
+<li><strong>kwargs</strong> – additional kwargs, passed to requests.Requests() as ‘param’ kwarg.</li>
 </ul>
 </td>
 </tr>
@@ -466,15 +586,15 @@ method.</li>
 
 <dl class="method">
 <dt id="bitex.interface.rest.RESTInterface.wallet">
-<code class="descname">wallet</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bitex.interface.rest.RESTInterface.wallet" title="Permalink to this definition">¶</a></dt>
+<code class="descname">wallet</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bitex/interface/rest.html#RESTInterface.wallet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitex.interface.rest.RESTInterface.wallet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the wallet of this account.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>args</strong> &#8211; additional arguments.</li>
-<li><strong>kwargs</strong> &#8211; additional kwargs, passed to requests.Requests() as &#8216;param&#8217; kwarg.</li>
+<li><strong>args</strong> – additional arguments.</li>
+<li><strong>kwargs</strong> – additional kwargs, passed to requests.Requests() as ‘param’ kwarg.</li>
 </ul>
 </td>
 </tr>
@@ -490,63 +610,73 @@ method.</li>
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">BitEx Code Reference</a></li>
-<li><a class="reference internal" href="#api-objects">API Objects</a></li>
-<li><a class="reference internal" href="#interface-objects">Interface Objects</a></li>
-</ul>
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="index.html" title="previous chapter">Welcome to BitEx&#8217;s documentation!</a></li>
-  </ul></li>
-</ul>
-</div>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/reference.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="guide.html" class="btn btn-neutral" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Nils Diefenbach.
+
     </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2017, Nils Diefenbach.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
-      
-      |
-      <a href="_sources/reference.txt"
-          rel="nofollow">Page source</a>
-    </div>
 
-    
+    </section>
 
-    
-  </body>
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
 </html>
